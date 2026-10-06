@@ -103,7 +103,8 @@ button { font: inherit; color: inherit; }
   background: var(--navy); color: var(--white);
   transition: box-shadow .3s, background-color .3s;
 }
-.site-header.is-scrolled { box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .6); background: rgba(10, 39, 65, .96); backdrop-filter: blur(10px); }
+/* pas de backdrop-filter ici : il casserait le menu mobile en position fixe */
+.site-header.is-scrolled { box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .6); }
 .header-in { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; flex: none; }
 .brand img { width: 132px; height: auto; }
@@ -140,6 +141,7 @@ button { font: inherit; color: inherit; }
     transform: translateY(-8px); opacity: 0; visibility: hidden;
     transition: opacity .25s, transform .3s var(--ease), visibility 0s .3s;
   }
+  body.nav-open { overflow: hidden; }
   .nav-open .nav { opacity: 1; transform: none; visibility: visible; transition: opacity .25s, transform .3s var(--ease); }
   .nav a:not(.btn) { padding: 14px 8px; font-size: 1.1rem; border-bottom: 1px solid var(--line-on-navy); border-radius: 0; }
   .nav .btn { margin: 16px 0 0; min-height: 52px; }
