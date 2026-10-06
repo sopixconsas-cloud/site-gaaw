@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAAW – Livraison express et paiement du vendeur en une seule course</title>
+<meta name="description" content="Faites livrer un colis en ville par un livreur indépendant, suivez-le en direct et réglez la livraison et l'article en un seul paiement. Sans abonnement. Application iOS et Android.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.gaaw.fr/">
+<meta name="theme-color" content="#0a2741">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="GAAW Livraison Express">
+<meta property="og:title" content="GAAW – Livraison express et paiement du vendeur en une seule course">
+<meta property="og:description" content="Faites livrer un colis en ville par un livreur indépendant, suivez-le en direct et réglez la livraison et l'article en un seul paiement. Sans abonnement. Application iOS et Android.">
+<meta property="og:url" content="https://www.gaaw.fr/">
+<meta property="og:image" content="https://www.gaaw.fr/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo/gaaw-icone.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800&family=Funnel+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.gaaw.fr/#organisation",
+   "name": "GAAW",
+   "alternateName": "GAAW Livraison Express",
+   "url": "https://www.gaaw.fr/",
+   "logo": "https://www.gaaw.fr/assets/img/apple-touch-icon.png",
+   "email": "contact@gaaw.fr",
+   "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Île-de-France"
+   },
+   "founder": {
+    "@type": "Person",
+    "name": "Mamadou Assane Ndoye"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.gaaw.fr/#site",
+   "url": "https://www.gaaw.fr/",
+   "name": "GAAW Livraison Express",
+   "inLanguage": "fr-FR",
+   "publisher": {
+    "@id": "https://www.gaaw.fr/#organisation"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.gaaw.fr/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Où GAAW est-il disponible ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GAAW démarre en Île-de-France. Chaque demande est proposée aux livreurs disponibles dans un rayon d'environ 20 km autour du point de retrait."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Combien coûte une livraison ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le prix dépend de la distance et de la taille du colis (petit, moyen ou grand). Il s'affiche avant que vous validiez et reste ferme, sauf si la course change : adresse modifiée, attente prolongée ou colis différent de ce qui a été déclaré. Il n'y a ni abonnement, ni engagement, ni minimum de commandes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment payer le vendeur en même temps que la livraison ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Au moment de commander, indiquez le montant à encaisser. Vous réglez la livraison et l'article en un seul paiement par carte, et le vendeur reçoit son montant sur son wallet GAAW. Vérifiez bien le montant et le bénéficiaire : GAAW organise la livraison et le paiement, mais n'est pas partie à la vente elle-même."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que se passe-t-il si le destinataire est absent ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le livreur vous contacte immédiatement depuis l'application. Sans instruction de votre part dans les 15 minutes, le colis vous est retourné, et les frais de retour sont alors à votre charge."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce que je ne peux pas envoyer ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sont notamment interdits : les espèces et valeurs, les armes, les stupéfiants, les matières dangereuses, les animaux, les contrefaçons et tout bien dont la circulation est illicite. Les boissons alcoolisées ne peuvent être remises qu'à une personne majeure. La liste complète figure à l'article 10 des Conditions générales d'utilisation."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment devenir livreur ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Téléchargez l'application et choisissez « Devenir livreur » à l'inscription. Il vous faut un statut d'indépendant, une responsabilité civile professionnelle, une assurance couvrant l'usage professionnel de votre véhicule et une pièce d'identité valide. Vous restez libre de vos horaires et de chaque course que vous acceptez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mon argent et mes données sont-ils protégés ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les paiements et les wallets sont gérés par Stripe, prestataire de services de paiement agréé. GAAW ne stocke jamais vos numéros de carte bancaire. Vos données sont traitées conformément au RGPD ; tout est détaillé dans notre politique de confidentialité."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment joindre le service client ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depuis la rubrique « Aide » de l'application, ou par e-mail à support@gaaw.fr."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="has-mobile-cta">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header" id="header">
+  <div class="wrap header-in">
+    <a class="brand" href="#haut" aria-label="GAAW, retour à l'accueil"><img src="assets/img/logo/gaaw-logo-vert.svg" alt="GAAW Livraison Express" width="132" height="41"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span></button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#comment-ca-marche">Comment ça marche</a><a href="#paiement">Paiement</a><a href="#pour-qui">Pour qui</a><a href="#livreurs">Devenir livreur</a><a href="#faq">FAQ</a>
+      <a class="btn btn-lime" href="#telecharger" data-store="smart">Télécharger l'app</a>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+<section class="hero" id="haut">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="reveal">Votre colis livré, <span class="hl">le vendeur payé</span>, en une seule course.</h1>
+      <p class="hero-lead reveal reveal-d1">Un livreur indépendant vient chercher votre colis à moins de 20&nbsp;km, vous le suivez en direct, et <strong>un seul paiement règle la livraison et l'article</strong>. Sans abonnement, sans minimum de commandes.</p>
+      <div class="stores reveal reveal-d2">
+        <a class="store" href="telecharger.html" data-store="ios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 18.5h3"/></svg><span><small>Télécharger sur</small><strong>App Store</strong></span></a>
+        <a class="store" href="telecharger.html" data-store="android"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 18.5h3"/></svg><span><small>Disponible sur</small><strong>Google Play</strong></span></a>
+      </div>
+      <p class="hero-links reveal reveal-d3"><a href="#comment-ca-marche">Voir comment ça marche</a><a href="#livreurs">Devenir livreur</a></p>
+      <ul class="hero-proofs reveal reveal-d3" aria-label="Garanties">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Suivi en temps réel</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></svg>Remise contre code à 4 chiffres</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6"/></svg>Paiement sécurisé par Stripe</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" role="img" aria-label="Aperçu de l'application GAAW : une course suivie en direct, de la recherche du livreur jusqu'à la livraison, avec un code de validation et le paiement versé au vendeur.">
+      <div class="phone" id="live-phone">
+        <div class="phone-screen">
+          <div class="ph-map">
+            <svg viewBox="0 0 300 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="300" height="330" fill="#e8ece4"/>
+              <path d="M188 18 L262 30 L270 92 L204 96 Z" fill="#d5e5c1"/>
+              <path d="M18 238 L70 230 L80 290 L24 300 Z" fill="#d5e5c1"/>
+              <path d="M-20 214 C 60 190, 120 200, 170 176 S 270 140, 330 150" fill="none" stroke="#c7d6e1" stroke-width="30"/>
+              <g fill="none" stroke="#fff" stroke-linecap="round">
+                <path d="M0 60 H300 M0 112 H300 M0 262 H300 M80 0 V330 M170 0 V330 M240 120 V330" stroke-width="9"/>
+                <path d="M0 30 H300 M0 88 H170 M0 150 H140 M120 0 V170 M210 0 V112 M30 0 V200 M0 300 H300 M200 230 V330 M120 240 V330 M170 230 L300 210" stroke-width="4"/>
+              </g>
+              <path d="M170 160 V200" stroke="#fff" stroke-width="12"/>
+              <path id="r1" d="M34 30 L80 30 L80 112 L110 112" fill="none" stroke="#0a2741" stroke-opacity=".35" stroke-width="3" stroke-dasharray="1 6" stroke-linecap="round"/>
+              <path id="r2" d="M110 112 L170 112 L170 222 L240 212 L240 262" fill="none" stroke="#0a2741" stroke-width="4" stroke-dasharray="8 6" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="110" cy="112" r="8" fill="#0a2741" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(240 262)">
+                <path d="M0 0 C -4 -8 -12 -13 -12 -22 a12 12 0 1 1 24 0 C 12 -13 4 -8 0 0 Z" fill="#cdf900" stroke="#0a2741" stroke-width="2.5"/>
+                <circle cy="-22" r="4.5" fill="#0a2741"/>
+              </g>
+              <g id="courier" transform="translate(34 30)">
+                <circle r="16" fill="#cdf900" opacity=".35"><animate attributeName="r" values="11;19;11" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;0;.5" dur="1.8s" repeatCount="indefinite"/></circle>
+                <circle r="10" fill="#0a2741" stroke="#fff" stroke-width="2.5"/>
+                <circle r="4" fill="#cdf900"/>
+              </g>
+            </svg>
+          </div>
+          <div class="ph-sheet">
+            <div class="ph-grab"></div>
+            <div class="ph-head"><strong id="ph-status">Recherche d'un livreur…</strong><span class="ph-pct" id="ph-pct">10%</span></div>
+            <div class="ph-eta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span id="ph-eta">Arrivée estimée : 15 min</span></div>
+            <div class="ph-bar"><i id="ph-bar"></i></div>
+            <div class="ph-row ph-courier is-searching" id="ph-courier">
+              <span class="ph-avatar">TD</span>
+              <div><b id="ph-courier-name">Un livreur proche…</b><small id="ph-courier-sub">Rayon de 20 km</small></div>
+              <span class="ph-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.6 4.2-2.1 1.4a10 10 0 0 0 6.4 6.4l1.4-2.1L20 15.5V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.7 1.6 1.6 0 0 1 5 4z"/></svg></span>
+            </div>
+            <div class="ph-row">
+              <span class="ph-avatar" style="background:#eef2f5;color:#0a2741"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.3v9.4L12 21l-8-4.3V7.3L12 3z"/><path d="M4 7.3l8 4.4 8-4.4M12 11.7V21"/></svg></span>
+              <div><b>Colis moyen</b><small>Rue Oberkampf → Rue de Charonne</small><br><span class="ph-cash">Montant à encaisser : 20 €</span></div>
+            </div>
+            <div class="ph-stack">
+              <div class="ph-cancel is-on" id="ph-cancel">Annuler la commande</div>
+              <div class="ph-code" id="ph-code"><small>CODE DE VALIDATION</small><span>6</span><span>7</span><span>8</span><span>0</span></div>
+              <div class="ph-done" id="ph-done"><b>Livraison effectuée !</b>Merci d'avoir utilisé GAAW.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="float-card fc-notif" id="fc-notif"><span class="fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15L6 16.5z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg></span><div><b>Commande en route</b>Votre livreur est à 5 minutes.</div></div>
+      <div class="float-card fc-pay" id="fc-pay"><span class="fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3"/><rect x="4" y="8" width="16.5" height="11.5" rx="2.5"/><path d="M15.5 13.75h2"/></svg></span><div><b>20 € versés au vendeur</b>sur son wallet GAAW, à la livraison.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="comment-ca-marche">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Comment ça marche</p>
+      <h2>Une course GAAW, du premier clic à la remise.</h2>
+      <p>Quatre étapes dans l'application, et personne n'a besoin de se croiser pour être payé.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-phone" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-screen">
+            <img class="is-on" src="assets/img/ecrans/ecran-adresses.webp" alt="" width="394" height="874" loading="lazy">
+            <img src="assets/img/ecrans/ecran-recap.webp" alt="" width="394" height="874" loading="lazy">
+            <img src="assets/img/ecrans/ecran-en-route.webp" alt="" width="394" height="874" loading="lazy">
+            <img src="assets/img/ecrans/ecran-livre.webp" alt="" width="394" height="874" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="how-steps">
+        <span class="how-progress" aria-hidden="true"></span>
+        <ol>
+        <li class="step is-active">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Dites-nous où aller</h3>
+          <p>Adresse de retrait, adresse de livraison, taille du colis. Le prix s'affiche avant que vous commandiez, et il ne change pas tant que la course reste la même.</p>
+          <ul><li>Petit</li><li>Moyen</li><li>Grand</li></ul>
+          <figure class="step-shot"><img src="assets/img/ecrans/ecran-adresses.webp" alt="Écran « Où allons-nous ? » avec les deux adresses et le choix de la taille du colis" width="394" height="874" loading="lazy"></figure>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Ajoutez le montant à encaisser</h3>
+          <p>Le colis est un article vendu ? Indiquez son prix. Il s'ajoute aux frais de livraison et vous réglez tout en un seul paiement par carte.</p>
+          <figure class="step-shot"><img src="assets/img/ecrans/ecran-recap.webp" alt="Écran récapitulatif : frais de livraison, montant à encaisser et total" width="394" height="874" loading="lazy"></figure>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Un livreur proche accepte</h3>
+          <p>La demande part aux livreurs disponibles autour du point de retrait. Vous voyez son nom, son véhicule et sa position, étape par étape, jusqu'à votre porte.</p>
+          <ul><li>Recherche</li><li>En route vers le retrait</li><li>Sur place</li><li>En route vers vous</li></ul>
+          <figure class="step-shot"><img src="assets/img/ecrans/ecran-en-route.webp" alt="Écran de suivi : livreur en route vers le retrait, avec le code de validation" width="394" height="874" loading="lazy"></figure>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <h3>Remise contre code, chacun est payé</h3>
+          <p>Le destinataire donne au livreur le code à 4 chiffres affiché dans l'application. La livraison est confirmée, et la répartition du paiement se fait automatiquement.</p>
+          <figure class="step-shot"><img src="assets/img/ecrans/ecran-livre.webp" alt="Écran « Livraison effectuée ! »" width="394" height="874" loading="lazy"></figure>
+        </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-navy" id="paiement">
+  <div class="wrap">
+    <div class="pay-grid">
+      <div>
+        <p class="kicker reveal">Le paiement</p>
+        <h2 class="h2 reveal">Un paiement. Trois personnes payées.</h2>
+      </div>
+      <div class="pay-copy">
+        <p class="lead reveal reveal-d1">Plus besoin de virement entre inconnus, d'espèces à la porte ou de relances. Ce que vous payez est réparti automatiquement entre ceux qui doivent l'être.</p>
+        <p class="pay-example reveal reveal-d2">Vous achetez un téléphone à un particulier à l'autre bout de la ville. Dans GAAW, vous commandez la livraison et indiquez <b>80 €</b> à verser au vendeur. Vous payez une fois&nbsp;: le livreur, le vendeur et GAAW reçoivent chacun leur part.</p>
+      </div>
+    </div>
+    <div class="split-wrap">
+        <div class="split" id="split">
+        <div class="split-src">
+          <div class="node node-src">
+            <small>Vous payez</small>
+            <p class="amount" data-count="95">95 €</p>
+            <small>livraison + 80 € d'article</small>
+          </div>
+        </div>
+        <div class="split-lines" aria-hidden="true">
+          <svg class="lines-h" viewBox="0 0 100 300" preserveAspectRatio="none">
+            <path pathLength="1" d="M0 150 C 50 150, 50 50, 100 50"/>
+            <path pathLength="1" d="M0 150 C 50 150, 50 150, 100 150"/>
+            <path pathLength="1" d="M0 150 C 50 150, 50 250, 100 250"/>
+            <path class="flow" pathLength="1" d="M0 150 C 50 150, 50 50, 100 50"/>
+            <path class="flow" pathLength="1" d="M0 150 C 50 150, 50 150, 100 150"/>
+            <path class="flow" pathLength="1" d="M0 150 C 50 150, 50 250, 100 250"/>
+          </svg>
+          <svg class="lines-v" viewBox="0 0 300 100" preserveAspectRatio="none">
+            <path pathLength="1" d="M150 0 C 150 50, 50 50, 50 100"/>
+            <path pathLength="1" d="M150 0 C 150 50, 150 50, 150 100"/>
+            <path pathLength="1" d="M150 0 C 150 50, 250 50, 250 100"/>
+            <path class="flow" pathLength="1" d="M150 0 C 150 50, 50 50, 50 100"/>
+            <path class="flow" pathLength="1" d="M150 0 C 150 50, 150 50, 150 100"/>
+            <path class="flow" pathLength="1" d="M150 0 C 150 50, 250 50, 250 100"/>
+          </svg>
+        </div>
+        <div class="split-dst">
+          <div class="node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.5 1.5 0 0 1 0 2.1l-6 6a1.5 1.5 0 0 1-2.1 0l-9-9z"/><circle cx="8" cy="8" r="1.6"/></svg></span><div><small>Le vendeur reçoit</small><b>80 € sur son wallet</b></div></div>
+          <div class="node"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="16.5" r="3.5"/><circle cx="18" cy="16.5" r="3.5"/><path d="M6 16.5l3.5-7h5l3.5 7M9.5 9.5L8 6.5H5.5M14.5 9.5L12 16.5h-6"/></svg></span><div><small>Le livreur reçoit</small><b>Sa rémunération de course</b></div></div>
+          <div class="node"><span class="ico"><img src="assets/img/logo/gaaw-icone-vert.svg" alt="" width="24" height="21" style="width:24px;height:auto"></span><div><small>GAAW perçoit</small><b>Ses frais de service</b></div></div>
+        </div>
+      </div>
+  <p class="split-note">Exemple illustratif. Les paiements sont exécutés par Stripe, prestataire de services de paiement agréé&nbsp;; GAAW n'encaisse pas de fonds pour le compte de tiers.</p>
+    </div>
+
+    <div class="wallet">
+      <div class="reveal">
+        <h3>Un wallet pour chaque utilisateur.</h3>
+        <p>Livreur, vendeur, commerçant ou porteur GP&nbsp;: votre compte GAAW reçoit l'argent qui vous revient, et vous le virez vers votre banque quand vous voulez. Il s'ouvre après une vérification d'identité.</p>
+      </div>
+      <ul class="wallet-list reveal reveal-d1">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="16.5" r="3.5"/><circle cx="18" cy="16.5" r="3.5"/><path d="M6 16.5l3.5-7h5l3.5 7M9.5 9.5L8 6.5H5.5M14.5 9.5L12 16.5h-6"/></svg><div><b>Encaisser ses courses</b><span>Chaque course livrée crédite le wallet du livreur.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.5 1.5 0 0 1 0 2.1l-6 6a1.5 1.5 0 0 1-2.1 0l-9-9z"/><circle cx="8" cy="8" r="1.6"/></svg><div><b>Être payé pour un article vendu</b><span>Le vendeur reçoit son prix au moment de la livraison.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13.5l18-8-5.5 15-3.5-6.5-9-0.5z"/><path d="M12 14l3.5-3.5"/></svg><div><b>Rémunérer un porteur GP</b><span>Sa part est versée à la remise du colis, sans espèces.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5V20h16V9.5"/><path d="M3 9.5L5 4h14l2 5.5a2.6 2.6 0 0 1-4.5 1.6 2.6 2.6 0 0 1-4.5 0 2.6 2.6 0 0 1-4.5 0A2.6 2.6 0 0 1 3 9.5z"/><path d="M9.5 20v-5h5v5"/></svg><div><b>Payer un commerçant sans terminal</b><span>Une boutique sans TPE reçoit le paiement sur son wallet.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5L12 4.5l8.5 5"/><path d="M5.5 10v7.5M10 10v7.5M14 10v7.5M18.5 10v7.5M3.5 20.5h17"/></svg><div><b>Virer son solde vers sa banque</b><span>À tout moment, vers un compte à votre nom.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6"/></svg><div><b>Sans jamais exposer sa carte</b><span>GAAW ne stocke pas vos numéros de carte bancaire.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="pour-qui">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Pour qui</p>
+      <h2>Pensé pour ceux que les grandes plateformes oublient.</h2>
+      <p>Pas besoin d'être une enseigne, d'avoir un contrat ou un volume minimum. Si vous avez quelque chose à faire livrer en ville, GAAW est fait pour vous.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Profils d'utilisateurs">
+      <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true">Particuliers</button>
+      <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1">Vente entre particuliers</button>
+      <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1">Commerces de quartier</button>
+      <button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1">Porteurs GP et diaspora</button>
+      <button class="tab" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1">Entreprises</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+      <div>
+        <h3>Les clés oubliées, le chargeur resté chez un ami.</h3>
+        <p>Pour tous les petits imprévus du quotidien, commandez une course en quelques secondes et un livreur proche s'en occupe.</p>
+        <ul class="checks">
+          <li>Prix affiché avant de commander</li>
+          <li>Suivi du livreur en direct, notifications à chaque étape</li>
+          <li>Remise sécurisée par code à 4 chiffres</li>
+        </ul>
+      </div>
+      <div class="ticket">
+        <div class="ticket-top"><b>Course express</b><span class="ticket-tag">Petit colis</span></div>
+        <div class="route"><p><small>Retrait</small>Chez Awa, Montreuil</p><p><small>Livraison</small>Bureau, Paris 11e</p></div>
+        <dl class="ticket-rows"><div><dt>Montant à encaisser</dt><dd>Aucun</dd></div><div><dt>Paiement</dt><dd>Carte bancaire</dd></div></dl>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+      <div>
+        <h3>Vendu en ligne, livré dans l'heure, payé à la remise.</h3>
+        <p>Vous avez trouvé l'acheteur sur une appli de petites annonces, à quelques kilomètres&nbsp;? Inutile d'attendre un point relais pendant trois jours.</p>
+        <ul class="checks">
+          <li>L'acheteur paie la livraison et l'article en une fois</li>
+          <li>Le vendeur reçoit son prix sur son wallet à la livraison</li>
+          <li>Ni virement entre inconnus, ni espèces</li>
+        </ul>
+      </div>
+      <div class="ticket">
+        <div class="ticket-top"><b>Vente entre particuliers</b><span class="ticket-tag">Colis moyen</span></div>
+        <div class="route"><p><small>Retrait</small>Vendeur, Vincennes</p><p><small>Livraison</small>Acheteur, Paris 12e</p></div>
+        <dl class="ticket-rows"><div class="cash"><dt>Montant à encaisser</dt><dd>80 €</dd></div><div><dt>Versé à</dt><dd>Wallet du vendeur</dd></div></dl>
+        <p class="ticket-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></svg>Le vendeur est payé quand le code est validé.</p>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+      <div>
+        <h3>Le fleuriste, l'épicerie exotique, le traiteur du coin.</h3>
+        <p>Livrez vos clients du quartier sans abonnement ni engagement, et encaissez le prix de la commande en même temps que la livraison.</p>
+        <ul class="checks">
+          <li>Une course quand vous en avez besoin, pas de minimum</li>
+          <li>Le paiement du client arrive sur votre wallet, même sans terminal</li>
+          <li>Vos clients suivent leur commande en direct</li>
+        </ul>
+      </div>
+      <div class="ticket">
+        <div class="ticket-top"><b>Commande boutique</b><span class="ticket-tag">Colis moyen</span></div>
+        <div class="route"><p><small>Retrait</small>Fleuriste, Paris 18e</p><p><small>Livraison</small>Client, Saint-Ouen</p></div>
+        <dl class="ticket-rows"><div class="cash"><dt>Montant à encaisser</dt><dd>45 €</dd></div><div><dt>Versé à</dt><dd>Wallet de la boutique</dd></div></dl>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+      <div>
+        <h3>Des dizaines de colis arrivés de Dakar, Abidjan ou Bamako.</h3>
+        <p>Porteurs GP, faites distribuer le dernier kilomètre par des livreurs GAAW. Votre part est versée sur votre wallet à chaque remise.</p>
+        <ul class="checks">
+          <li>Une course par destinataire, suivie de bout en bout</li>
+          <li>Votre rémunération sans espèces, à la remise</li>
+          <li>Une trace de chaque colis remis, avec son code</li>
+        </ul>
+      </div>
+      <div class="ticket">
+        <div class="ticket-top"><b>Distribution GP</b><span class="ticket-tag">Grand colis</span></div>
+        <div class="route"><p><small>Retrait</small>Porteur GP, Paris 10e</p><p><small>Livraison</small>Famille Diop, Bobigny</p></div>
+        <dl class="ticket-rows"><div class="cash"><dt>Part du porteur GP</dt><dd>Montant convenu</dd></div><div><dt>Versé à</dt><dd>Wallet du GP</dd></div></dl>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" hidden>
+      <div>
+        <h3>PME, associations, e-commerçants locaux.</h3>
+        <p>Vous avez des livraisons régulières en ville&nbsp;? Parlons d'une formule adaptée à vos volumes, avec un engagement de service et une intégration à vos outils.</p>
+        <ul class="checks">
+          <li>Tarification selon vos volumes</li>
+          <li>Engagement de niveau de service</li>
+          <li>Intégration par API</li>
+        </ul>
+        <a class="btn btn-navy" href="mailto:contact@gaaw.fr?subject=GAAW%20pour%20mon%20entreprise">Nous écrire</a>
+      </div>
+      <div class="ticket">
+        <div class="ticket-top"><b>Compte entreprise</b><span class="ticket-tag">Sur devis</span></div>
+        <div class="route"><p><small>Retrait</small>Votre entrepôt ou boutique</p><p><small>Livraison</small>Vos clients, partout en ville</p></div>
+        <dl class="ticket-rows"><div><dt>Facturation</dt><dd>Mensuelle</dd></div><div><dt>Intégration</dt><dd>API</dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-lime" id="livreurs">
+  <div class="wrap courier-grid">
+    <div>
+      <p class="kicker reveal">Devenir livreur</p>
+      <h2 class="reveal">Livrez quand vous voulez. Encaissez à chaque course.</h2>
+      <p class="lead reveal reveal-d1">Avec GAAW, vous restez indépendant&nbsp;: vous vous connectez quand ça vous arrange et vous choisissez les courses que vous acceptez, sans avoir à vous justifier.</p>
+      <ul class="checks reveal reveal-d2">
+        <li>Des courses près de chez vous, à vélo, en scooter ou en voiture</li>
+        <li>Votre rémunération créditée sur votre wallet après chaque course</li>
+        <li>Un virement vers votre compte bancaire quand vous le décidez</li>
+      </ul>
+      <div class="needs reveal reveal-d2">
+        <h3>Ce qu'il vous faut</h3>
+        <ul>
+          <li>Un statut d'indépendant (numéro SIRET)</li>
+          <li>Une responsabilité civile professionnelle et une assurance véhicule pour un usage pro</li>
+          <li>Une pièce d'identité valide, et un titre de séjour autorisant le travail si nécessaire</li>
+        </ul>
+      </div>
+      <div class="courier-cta reveal reveal-d3">
+        <a class="btn btn-navy" href="telecharger.html" data-store="smart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>Télécharger l'app</a>
+        <p>puis choisissez «&nbsp;Devenir livreur&nbsp;» à l'inscription.</p>
+      </div>
+    </div>
+    <div class="courier-visual reveal">
+      <div class="phone"><div class="phone-screen"><img src="assets/img/ecrans/ecran-inscription.webp" alt="Écran d'inscription : choisir entre « Envoyer un colis » et « Devenir livreur »" width="394" height="852" loading="lazy"></div></div>
+      <div class="courier-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3"/><rect x="4" y="8" width="16.5" height="11.5" rx="2.5"/><path d="M15.5 13.75h2"/></svg><div><b>Course livrée</b>Crédit ajouté à votre wallet.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="faq">
+  <div class="wrap faq-grid">
+    <div class="section-head">
+      <p class="kicker">Questions fréquentes</p>
+      <h2>Avant de télécharger.</h2>
+      <p>Une autre question&nbsp;? Écrivez-nous à <a href="mailto:support@gaaw.fr" style="color:var(--navy);font-weight:600">support@gaaw.fr</a>.</p>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Où GAAW est-il disponible ?</summary><div class="faq-answer"><p>GAAW démarre en Île-de-France. Chaque demande est proposée aux livreurs disponibles dans un rayon d'environ 20&nbsp;km autour du point de retrait.</p></div></details>
+      <details><summary>Combien coûte une livraison ?</summary><div class="faq-answer"><p>Le prix dépend de la distance et de la taille du colis (petit, moyen ou grand). Il s'affiche avant que vous validiez et reste ferme, sauf si la course change&nbsp;: adresse modifiée, attente prolongée ou colis différent de ce qui a été déclaré.</p><p>Il n'y a ni abonnement, ni engagement, ni minimum de commandes.</p></div></details>
+      <details><summary>Comment payer le vendeur en même temps que la livraison ?</summary><div class="faq-answer"><p>Au moment de commander, indiquez le montant à encaisser. Vous réglez la livraison et l'article en un seul paiement par carte, et le vendeur reçoit son montant sur son wallet GAAW.</p><p>Vérifiez bien le montant et le bénéficiaire&nbsp;: GAAW organise la livraison et le paiement, mais n'est pas partie à la vente elle-même.</p></div></details>
+      <details><summary>Que se passe-t-il si le destinataire est absent ?</summary><div class="faq-answer"><p>Le livreur vous contacte immédiatement depuis l'application. Sans instruction de votre part dans les 15&nbsp;minutes, le colis vous est retourné, et les frais de retour sont alors à votre charge.</p></div></details>
+      <details><summary>Qu'est-ce que je ne peux pas envoyer ?</summary><div class="faq-answer"><p>Sont notamment interdits&nbsp;: les espèces et valeurs, les armes, les stupéfiants, les matières dangereuses, les animaux, les contrefaçons et tout bien dont la circulation est illicite. Les boissons alcoolisées ne peuvent être remises qu'à une personne majeure.</p><p>La liste complète figure à l'article&nbsp;10 des <a href="cgu.html#article-10">Conditions générales d'utilisation</a>.</p></div></details>
+      <details><summary>Comment devenir livreur ?</summary><div class="faq-answer"><p>Téléchargez l'application et choisissez «&nbsp;Devenir livreur&nbsp;» à l'inscription. Il vous faut un statut d'indépendant, une responsabilité civile professionnelle, une assurance couvrant l'usage professionnel de votre véhicule et une pièce d'identité valide.</p><p>Vous restez libre de vos horaires et de chaque course que vous acceptez.</p></div></details>
+      <details><summary>Mon argent et mes données sont-ils protégés ?</summary><div class="faq-answer"><p>Les paiements et les wallets sont gérés par Stripe, prestataire de services de paiement agréé. GAAW ne stocke jamais vos numéros de carte bancaire.</p><p>Vos données sont traitées conformément au RGPD&nbsp;; tout est détaillé dans notre <a href="confidentialite.html">politique de confidentialité</a>.</p></div></details>
+      <details><summary>Comment joindre le service client ?</summary><div class="faq-answer"><p>Depuis la rubrique «&nbsp;Aide&nbsp;» de l'application, ou par e-mail à <a href="mailto:support@gaaw.fr">support@gaaw.fr</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="download" id="telecharger">
+  <div class="wrap download-grid">
+    <div class="download-copy">
+      <h2 class="reveal">Votre prochain colis part <span class="hl">d'ici.</span></h2>
+      <p class="reveal reveal-d1">Téléchargez GAAW, créez votre compte en quelques minutes et commandez votre première course.</p>
+      <div class="stores reveal reveal-d2">
+        <a class="store" href="telecharger.html" data-store="ios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 18.5h3"/></svg><span><small>Télécharger sur</small><strong>App Store</strong></span></a>
+        <a class="store" href="telecharger.html" data-store="android"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 18.5h3"/></svg><span><small>Disponible sur</small><strong>Google Play</strong></span></a>
+      </div>
+      <div class="qr reveal reveal-d3" id="qr" hidden>
+        <div class="qr-code" id="qr-code"></div>
+        <p><b>Sur ordinateur&nbsp;?</b>Scannez ce code avec votre téléphone pour ouvrir le bon store.</p>
+      </div>
+    </div>
+    <div class="download-phone" aria-hidden="true">
+      <div class="phone"><div class="phone-screen"><img src="assets/img/ecrans/ecran-vers-vous.webp" alt="" width="394" height="874" loading="lazy"></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo/gaaw-logo-vert.svg" alt="GAAW Livraison Express" width="150" height="46" loading="lazy">
+        <p>La livraison express à la demande, avec le paiement de chacun réglé dans la même course.</p>
+      </div>
+      <div>
+        <h2>L'application</h2>
+        <ul>
+          <li><a href="index.html#comment-ca-marche">Comment ça marche</a></li>
+          <li><a href="index.html#paiement">Paiement et wallet</a></li>
+          <li><a href="index.html#livreurs">Devenir livreur</a></li>
+          <li><a href="telecharger.html">Télécharger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Informations légales</h2>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="cgu.html">Conditions d'utilisation</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:contact@gaaw.fr">contact@gaaw.fr</a></li>
+          <li><a href="mailto:support@gaaw.fr">support@gaaw.fr</a></li>
+          <li><a href="index.html#faq">Questions fréquentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GAAW. Tous droits réservés.</p>
+      <p>Paiements opérés par Stripe, prestataire de services de paiement agréé.</p>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta" id="mobile-cta" aria-hidden="true">
+  <img src="assets/img/logo/gaaw-icone-vert.svg" alt="" width="36" height="31">
+  <p><b>GAAW</b>Livraison et paiement en une course</p>
+  <a class="btn btn-lime" href="telecharger.html" data-store="smart" tabindex="-1">Télécharger</a>
+</div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
